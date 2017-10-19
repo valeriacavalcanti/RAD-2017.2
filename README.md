@@ -15,6 +15,7 @@ Códigos [Ruby](https://www.ruby-lang.org) desenvolvidos em sala de aula.
 \# | Data | Projeto | Conteúdo
 --- | --- | --- | ---
 01 | 05/10/2017 | Comandos Básico | Comandos Básico do Ruby
+02 | 19/10/2017 | OO | Ruby OO (Básico)
 
 ## **Ruby on Rails**
 Códigos [Rails](http://rubyonrails.org) desenvolvidos em sala de aula.
