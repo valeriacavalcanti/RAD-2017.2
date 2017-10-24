@@ -1,20 +1,19 @@
-load ("pessoa_fisica.rb")
+load ("cadastro.rb")
 
-# novos objetos
-p1 = Pessoa.new("primeira", 1)
-pf1 = PessoaFisica.new("Primeira PF", 10, "1234")
+cad = Cadastro.new
 
-#puts p1.nome
-#puts p1.idade
+cad.add(Pessoa.new("Primeira Pessoa", 1))
+cad.add(Pessoa.new("Segunda Pessoa", 2))
+cad.add(Pessoa.new("Terceira Pessoa", 3))
+cad.add(Pessoa.new("Quarta Pessoa", 4))
+cad.add(Pessoa.new("Quinta Pessoa", 4))
+cad.add(Pessoa.new("Sexta Pessoa", 4))
 
-#p1.nome = "Outro primeiro"
-#puts p1.nome
+cad.add(PessoaFisica.new("Primeira Pessoa Física", 1, "11"))
+cad.add(PessoaFisica.new("Segunda Pessoa Física", 2, "22"))
+cad.add(PessoaFisica.new("Terceira Pessoa Física", 3, "33"))
+cad.add(PessoaFisica.new("Quarta Pessoa Física", 4, "44"))
 
-p1.imprimir
-pf1.imprimir
-
-puts p1.is_a? Pessoa
-puts p1.is_a? PessoaFisica
-
-puts pf1.is_a? Pessoa
-puts pf1.is_a? PessoaFisica
+#puts cad.lista.inspect
+puts "Pessoa: #{cad.qtdePessoa}"
+puts "Pessoa Física: #{cad.qtdePessoaFisica}"
