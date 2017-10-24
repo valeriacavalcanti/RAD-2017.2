@@ -1,8 +1,8 @@
-load("cadastro.rb")
+load ("pessoa_fisica.rb")
 
 # novos objetos
-#p1 = Pessoa.new("primeira", 1)
-#pf1 = PessoaFisica.new("Primeira PF", 10, "1234")
+p1 = Pessoa.new("primeira", 1)
+pf1 = PessoaFisica.new("Primeira PF", 10, "1234")
 
 #puts p1.nome
 #puts p1.idade
