@@ -24,3 +24,5 @@ Códigos [Rails](http://rubyonrails.org) desenvolvidos em sala de aula.
 
 \# | Data | Projeto | Conteúdo
 --- | --- | --- | ---
+01 | 23/11/2017 | teste | Rails e MVC
+02 | 23/11/2017	| agenda | Scaffold
