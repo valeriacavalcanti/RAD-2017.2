@@ -1,0 +1,57 @@
+<%= form_with(model: subscription, local: true) do |form| %>
+  <% if subscription.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+
+      <ul>
+      <% subscription.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nota %>
+    <%= form.text_field :nota, id: :subscription_nota %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cre %>
+    <%= form.text_field :cre, id: :subscription_cre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :selecionado %>
+    <%= form.check_box :selecionado, id: :subscription_selecionado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :form_voluntario %>
+    <%= form.datetime_select :form_voluntario, id: :subscription_form_voluntario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :form_relatorio %>
+    <%= form.datetime_select :form_relatorio, id: :subscription_form_relatorio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :discipline_id %>
+    <%= collection_select(:subscription, :discipline_id, @disciplinas, :id, :descricao) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :semester_id %>
+    <%= collection_select(:subscription, :semester_id, @semestres, :id, :ano) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :student_id %>
+    <%= collection_select(:subscription, :student_id, @alunos, :id, :nome) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
