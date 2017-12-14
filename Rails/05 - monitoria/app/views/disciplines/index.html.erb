@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class="alert alert-dismissible alert-warning">
+  <h4 class="alert-heading" align="center">Disciplinas</h4>
+</div>
+
+<% titulo1 = "Descrição" %>
+<% titulo2 = "Abreviação" %>
+
+<%= render partial: "/disciplines/table", locals: { p1: titulo1, p2: titulo2 } %>
+
+<br>
+<br>
+
+<center>
+  <%= button_to 'Nova Disciplina', new_discipline_path, options={:method => :get, class: 'btn btn-warning'} %>
+</center>
