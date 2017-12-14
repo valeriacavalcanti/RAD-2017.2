@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @discipline.descricao %>
+</p>
+
+<p>
+  <strong>Abreviacao:</strong>
+  <%= @discipline.abreviacao %>
+</p>
+
+<%= link_to 'Edit', edit_discipline_path(@discipline) %> |
+<%= link_to 'Back', disciplines_path %>

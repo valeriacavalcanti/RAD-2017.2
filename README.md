@@ -29,3 +29,4 @@ Códigos [Rails](http://rubyonrails.org) desenvolvidos em sala de aula.
 03 | 01/12/2017 | monitoria | Scaffold, Routes e Helpers
 04 | 07/12/2017 | monitoria | Bootstrap e Partial
 05 | 14/12/2017 | monitoria | Cosméticos
+06 | 14/12/2017 | monitoria | Active Record e Task

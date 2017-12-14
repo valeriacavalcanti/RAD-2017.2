@@ -1,0 +1,27 @@
+<%= form_with(model: discipline, local: true) do |form| %>
+  <% if discipline.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(discipline.errors.count, "error") %> prohibited this discipline from being saved:</h2>
+
+      <ul>
+      <% discipline.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_field :descricao, id: :discipline_descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abreviacao %>
+    <%= form.text_field :abreviacao, id: :discipline_abreviacao %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
