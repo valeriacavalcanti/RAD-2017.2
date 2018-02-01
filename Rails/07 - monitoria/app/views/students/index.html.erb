@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<div class="alert alert-dismissible alert-success">
+  <h4 class="alert-heading" align="center">Alunos</h4>
+</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Matricula</th>
+      <th>E-mail</th>
+      <th>Telefone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.nome %></td>
+        <td><%= student.matricula %></td>
+        <td><%= student.contact.email %></td>
+        <td><%= student.contact.telefone %></td>
+        <td><%= link_to 'Show', student %></td>
+        <td><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<br>
+
+<center>
+  <%= button_to 'Novo Aluno', new_student_path, options={:method => :get, class: 'btn btn-success'} %>
+</center>
+
