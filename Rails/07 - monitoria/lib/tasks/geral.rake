@@ -39,7 +39,11 @@ namespace :geral do
   	10.times do |i|
   		Student.create(
   			nome: "Aluno #{i}", 
-  			matricula: "#{i}#{i}"
+  			matricula: "#{i}#{i}",
+			contact_attributes: {
+  				email: "aluno#{i}@email.com",
+  				telefone: "(83) #{i}#{i}-#{i}#{i}"
+  			}
   		)
   	end
   	puts(" [OK]")
