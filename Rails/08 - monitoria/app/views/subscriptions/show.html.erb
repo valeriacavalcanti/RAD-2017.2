@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nota:</strong>
+  <%= @subscription.nota %>
+</p>
+
+<p>
+  <strong>Cre:</strong>
+  <%= @subscription.cre %>
+</p>
+
+<p>
+  <strong>Selecionado:</strong>
+  <%= @subscription.selecionado %>
+</p>
+
+<p>
+  <strong>Discipline:</strong>
+  <%= @subscription.discipline.descricao %>
+</p>
+
+<p>
+  <strong>Semester:</strong>
+  <%= @subscription.semester.ano %>.
+  <%= @subscription.semester.periodo %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @subscription.student.nome %>
+</p>
+
+<p>
+  <strong>Quantidade de Relatórios:</strong>
+  <%= @subscription.reports.count %>
+</p>
+
+<p>
+  <strong>Relatórios</strong>
+  <br>
+    <% for r in @subscription.reports %>
+          <%= r.tipo %>
+          <br>
+    <% end %>
+</p>
+
+<%= link_to 'Edit', edit_subscription_path(@subscription) %> |
+<%= link_to 'Back', subscriptions_path %>

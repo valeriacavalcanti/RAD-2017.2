@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Monitoria</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <!-- Home -->
+      <li id="nav-item-home" class="nav-item active">
+        <a class="nav-link" href="<%= home_index_path %>">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <!-- Alunos -->
+      <li id="nav-item-alunos" class="nav-item">
+        <a class="nav-link" href="<%= students_path %>">Alunos</a>
+      </li>
+      <!-- Disciplinas -->
+      <li class="nav-item">
+        <a class="nav-link" href="<%= disciplines_path %>">Disciplinas</a>
+      </li>
+      <!-- Inscrições -->
+      <li class="nav-item">
+        <a class="nav-link" href="<%= subscriptions_path %>">Inscrições</a>
+      </li>
+      <!-- Semestres -->
+      <li class="nav-item">
+        <a class="nav-link" href="<%= semesters_path %>">Semestres</a>
+      </li>
+    </ul>
+  </div>
+</nav>
