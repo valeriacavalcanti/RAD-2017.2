@@ -32,3 +32,4 @@ Códigos [Rails](http://rubyonrails.org) desenvolvidos em sala de aula.
 06 | 14/12/2017 | monitoria | Active Record e Task
 07 | 15/12/2017 | monitoria | Associação: Has One
 08 | 08/02/2018 | monitoria | Associação: Has Many
+09 | 15/02/2018 | monitoria | Paginação, Validação e Autenticação Simples

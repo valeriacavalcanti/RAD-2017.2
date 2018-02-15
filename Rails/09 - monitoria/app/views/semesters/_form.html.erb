@@ -1,0 +1,37 @@
+<%= form_with(model: semester, local: true) do |form| %>
+  <% if semester.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(semester.errors.count, "error") %> prohibited this semester from being saved:</h2>
+
+      <ul>
+      <% semester.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ano %>
+    <%= form.number_field :ano, id: :semester_ano %>
+  </div>
+
+  <div class="field">
+    <%= form.label :periodo %>
+    <%= form.number_field :periodo, id: :semester_periodo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inicio %>
+    <%= form.date_select :inicio, id: :semester_inicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fim %>
+    <%= form.date_select :fim, id: :semester_fim %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
